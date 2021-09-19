@@ -27,4 +27,4 @@ jobs:
           subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
           resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
           template: ./azuredeploy.json
-          templateparameter: ./azuredeploy.parameters.json
+          parameters: ./azuredeploy.parameters.json
