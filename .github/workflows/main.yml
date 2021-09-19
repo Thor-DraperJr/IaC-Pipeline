@@ -9,7 +9,7 @@ env:
   AZURE_RESOURCE_GROUP: pipeline   # set this to your target resource group
 
 jobs:
-  deploy-virtual-network-template:
+  deploy-template:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
@@ -27,3 +27,4 @@ jobs:
           subscriptionId: ${{ env.AZURE_SUBSCRIPTION_ID }}
           resourceGroupName: ${{ env.AZURE_RESOURCE_GROUP }}
           template: ./azuredeploy.json
+          templateparameter: ./azuredeploy.parameters.json
